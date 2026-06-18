@@ -1,0 +1,61 @@
+.DS_Store
+
+# Local non-repository materials
+/latex/
+/reviews/
+/docs/
+/code/
+/Brain_Adapter.zip
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Logs and runtime outputs
+*.log
+logs/
+runs/
+wandb/
+events.out.tfevents*
+
+# Model artifacts and checkpoints
+checkpoints/
+checkpoints_*/
+outputs/
+results/
+weights/
+*.pth
+*.pt
+*.ckpt
+
+# Data and local experiment lists
+/datasets/
+*.h5
+*.nii
+*.nii.gz
+*.npy
+*.csv
+*.tsv
+*.lst
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
+
+# Archives
+*.zip

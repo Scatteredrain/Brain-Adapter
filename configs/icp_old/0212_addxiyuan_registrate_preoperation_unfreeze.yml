@@ -1,0 +1,16 @@
+_BASE_: './0212_addxiyuan_registrate_addhead.yml'
+model:
+  embed_dim: 512
+  num_mha_heads: 1
+  freeze_backbone: False
+loaders:
+  train:
+    img_file_path: '../../data/train_0212_registrated_preoperation.lst'
+    text_file_path: '../../data/train_0212_description_preoperation.lst'
+  test:
+    img_file_path: '../../data/test_0212_registrated_preoperation.lst'
+    text_file_path: '../../data/test_0212_description_preoperation.lst'
+scheduler:
+  n_epochs: 500
+  lr_decay_iters: 100
+name: 0212_addxiyuan_registrated_preoperation_unfreeze

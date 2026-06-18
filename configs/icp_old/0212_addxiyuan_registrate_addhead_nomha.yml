@@ -1,0 +1,7 @@
+_BASE_: './0212_addxiyuan_registrate_addhead.yml'
+
+model:
+  embed_dim: 1024
+  num_mha_heads: 1
+
+name: 0212_addxiyuan_registrated_nomha

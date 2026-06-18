@@ -1,0 +1,9 @@
+_BASE_: './0727_addxiyuan_registrate_addhead_filter5_addtransform_normalbs_adjustmax.yml'
+model:
+  prompt_length: 12
+  vision_ctx: 10
+loaders:
+  batch_size: 8
+scheduler:
+  accumulate_gradient_count: 1
+name: 0727_addxiyuan_registrated_addhead_nodecay_filter5_normalbs_adjustmax_unfreeze

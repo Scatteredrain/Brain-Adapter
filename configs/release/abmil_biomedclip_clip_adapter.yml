@@ -1,0 +1,9 @@
+_BASE_: './abmil_biomedclip.yml'
+VERSION: 1
+
+name: release_abmil_biomedclip_clip_adapter
+
+model:
+  use_clip_adapter: True
+  clip_adapter_reduction: 4
+  clip_adapter_ratio: 0.2

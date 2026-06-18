@@ -1,0 +1,8 @@
+_BASE_: './0918_alldata_abmil_biomedclip_baseline.yml'
+VERSION: 1
+name: 1216_ABMIL_BiomedCLIP_CLIPAdapter_5FOLD
+
+model:
+  use_clip_adapter: True
+  clip_adapter_reduction: 4
+  clip_adapter_ratio: 0.2

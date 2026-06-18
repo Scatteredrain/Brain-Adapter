@@ -1,0 +1,6 @@
+_BASE_: './0212_addxiyuan_registrate_addhead.yml'
+
+optimizer:
+  weight_decay: 0.0
+  
+name: 0212_addxiyuan_registrated_addhead_nodecay

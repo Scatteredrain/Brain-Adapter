@@ -1,0 +1,18 @@
+_BASE_: './baseline.yml'
+model:
+  transformer_dropout: 0.0
+loaders:
+  train:
+    img_file_path: '../../data/train_0212.lst'
+    text_file_path: '../../data/train_0212_description.lst'
+  test:
+    img_file_path: '../../data/test_0212.lst'
+    text_file_path: '../../data/test_0212_description.lst'
+optimizer:
+  weight_decay: 0.2
+scheduler:
+  n_epochs: 100
+  lr_decay_iters: 25
+trainer:
+  save_epoch_freq: 5
+name: 0212_addxiyuan_freezeclip

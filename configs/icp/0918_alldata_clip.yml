@@ -1,0 +1,62 @@
+_BASE_: './baseline.yml'
+model:
+  freeze_backbone: False
+  embed_dim: 1024
+  num_mha_heads: 1
+  transformer_dropout: 0.0
+
+  #PEFT
+  prompt_length: 12 # Vit-blocks_lengh = 12
+
+  # prompt tuning
+  use_vpt: False
+  vision_ctx: 3
+
+  # LoRA
+  use_lora: False
+  lora_rank: 4
+  lora_alpha: 8
+  
+loaders:
+  max_value: 40
+  batch_size: 8 #4
+  train:
+    # max_value: 40 #35
+    img_file_path: '../../data/data_all/train_registrated.lst'
+    text_file_path: '../../data/data_all/train_description.lst'
+    transformer:
+      raw:
+        RandomFlip:
+          enabled: True
+          axes: [0, ] 
+        RandomRotate:
+          enabled: True
+          axes: [[2,1]]
+          angle_spectrum: 45
+  test:
+    # max_value: 40 #35
+    img_file_path: '../../data/data_all/test_registrated.lst'
+    text_file_path: '../../data/data_all/test_description.lst'
+optimizer:
+  other_lr: 1e-5 #4e-4
+  clip_lr: 1e-6
+  weight_decay: 0.2
+  beta1: 0.9
+scheduler:
+  accumulate_gradient_count: 1
+  n_epochs: 100
+  lr_decay_iters: 25
+  cls_weight: 10
+trainer:
+  save_epoch_freq: 5
+num_gpus: 1
+checkpoints_dir: './checkpoints_retrieval/'
+name: 0309_unfreezeBackbone
+# 1112_contrastive_unfreeze_multiGPUs_continue
+#1104_reg_cls_diffrentBranches_CTtextPooling
+#1104_cls_reg_valuerange_-3to3_clsWeight_10_AddSigmoid
+#1103_cls_reg_valuerange_-3to3_clsWeight_10
+# 0928_only_contrastive
+# 0927_contrastive_cls_unctpool
+# 0926_only_contrastive_2
+# 0925_contrastive_reg_cls_unctpool

@@ -1,0 +1,13 @@
+_BASE_: './0212_addxiyuan.yml'
+loaders:
+  train:
+    img_file_path: '../../data/train_0212_registrated.lst'
+    text_file_path: '../../data/train_0212_description.lst'
+  test:
+    img_file_path: '../../data/test_0212_registrated.lst'
+    text_file_path: '../../data/test_0212_description.lst'
+scheduler:
+  accumulate_gradient_count: 16
+optimizer:
+  lr: 0.0002
+name: 0212_addxiyuan_registrated

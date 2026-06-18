@@ -1,0 +1,12 @@
+_BASE_: './0212_addxiyuan_registrate_addhead_filter5_visualprompt_addtransform.yml'
+model:
+  num_mha_heads: 1
+loaders:
+  batch_size: 2
+scheduler:
+  accumulate_gradient_count: 8
+optimizer:
+  lr: 0.0004
+  weight_decay: 0.001
+  beta1: 0.9
+name: 0212_addxiyuan_registrated_addhead_nodecay_filter5_visualprompt_addtransform_normalbs

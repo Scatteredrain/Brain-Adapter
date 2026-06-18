@@ -1,0 +1,40 @@
+_BASE_: './abmil_biomedclip.yml'
+VERSION: 1
+
+name: release_brain_adapter_paper
+
+loaders:
+  batch_size: 4
+
+model:
+  paper_core_mode: True
+  add_multi_cls: True
+  using_attnmil: False
+  use_lora: True
+  lora_rank: 16
+  lora_alpha: 16
+  max_fine_grained_sentences: 8
+  use_uar: False
+  uar_temperature: 0.07
+  uar_prompt_template: 'This CT study shows: {}.'
+  uar_class_names: []
+
+optimizer:
+  other_lr: 1e-5
+  clip_lr: 1e-6
+  beta1: 0.9
+  weight_decay: 0.2
+
+scheduler:
+  n_epochs: 100
+  lr_decay_iters: 50
+
+loss:
+  lambda_multi_cls: 1.0
+  lambda_align: 1.0
+  lambda_paper_consistency: 1.0
+  lambda_regress: 0.0
+  lambda_cls: 0.0
+  lambda_consis: 0.0
+  lambda_clip: 0.0
+  alignment_temperature: 0.07

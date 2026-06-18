@@ -1,0 +1,5 @@
+_BASE_: './0212_addxiyuan.yml'
+model:
+  freeze_backbone: False
+
+name: 0212_addxiyuan

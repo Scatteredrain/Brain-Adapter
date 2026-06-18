@@ -1,0 +1,10 @@
+_BASE_: './brain_adapter_paper.yml'
+VERSION: 1
+
+name: release_brain_adapter_paper_uar
+
+model:
+  use_uar: True
+  uar_temperature: 0.07
+  uar_prompt_template: 'This CT study shows: {}.'
+  uar_class_names: []

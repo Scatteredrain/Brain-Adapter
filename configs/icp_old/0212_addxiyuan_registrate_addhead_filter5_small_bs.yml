@@ -1,0 +1,6 @@
+_BASE_: './0212_addxiyuan_registrate_addhead_filter5.yml'
+
+scheduler:
+  accumulate_gradient_count: 1
+
+name: 0212_addxiyuan_registrated_addhead_nodecay_filter5_smallbs

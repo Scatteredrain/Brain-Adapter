@@ -1,0 +1,11 @@
+_BASE_: './0212_addxiyuan_registrate_addhead_nodecay.yml'
+loaders:
+  train:
+    img_file_path: '../../data/train_0212_registrated_5.0.lst'
+    text_file_path: '../../data/train_0212_description_5.0.lst'
+  test:
+    img_file_path: '../../data/test_0212_registrated_5.0.lst'
+    text_file_path: '../../data/test_0212_description_5.0.lst'
+optimizer:
+  weight_decay: 0.0001
+name: 0212_addxiyuan_registrated_addhead_nodecay_filter5

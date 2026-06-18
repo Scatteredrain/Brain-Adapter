@@ -1,0 +1,8 @@
+_BASE_: './abmil_biomedclip.yml'
+VERSION: 1
+
+name: release_abmil_biomedclip_vpt
+
+model:
+  use_vpt: True
+  vision_ctx: 3

@@ -1,0 +1,56 @@
+model:
+  freeze_backbone: True
+  embed_dim: 512
+  num_mha_heads: 1
+  transformer_dropout: 0.3
+
+loaders:
+  batch_size: 1
+  serial_batches: False
+  num_threads: 8
+  train:
+    img_file_path: '../../data/train_5.lst'
+    WL_WW: [40, 90]
+    transformer:
+      raw:
+        Normalize:
+          enabled: True
+        CropToFixed:
+          enabled: True
+          size: [224, 224]
+          centered: True
+          mode: 'constant'
+        ToTensor:
+          enabled: True
+          expand_dims: True
+        RepeatDim:
+          enabled: True
+          repeat_dim: 0
+        
+  test:
+    img_file_path: '../../data/test_5.lst'
+    transformer:
+      raw:
+        Normalize:
+          enabled: True
+        CropToFixed:
+          enabled: True
+          size: [224, 224]
+          centered: True
+          mode: 'constant'
+        ToTensor:
+          enabled: True
+          expand_dims: True
+        RepeatDim:
+          enabled: True
+          repeat_dim: 0
+        
+optimizer:
+  other_lr: 0.00001
+  lr: 0.0002
+  beta1: 0.9
+scheduler:
+  n_epochs: 100
+trainer:
+  print_freq: 10
+  save_epoch_freq: 10

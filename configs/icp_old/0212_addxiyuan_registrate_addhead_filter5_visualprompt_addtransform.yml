@@ -1,0 +1,23 @@
+_BASE_: './0212_addxiyuan_registrate_addhead_filter5_visualprompt.yml'
+
+loaders:
+  train:
+    transformer:
+      raw:
+        RandomRotate:
+          enabled: True
+          axes: [[2,1]]
+          angle_spectrum: 45
+        ElasticDeformation:
+          enabled: True
+        GaussianBlur3D:
+          enabled: True
+          execution_probability: 0.2
+        AdditiveGaussianNoise:
+          enabled: True
+          execution_probability: 0.2
+        AdditivePoissonNoise:
+          enabled: True
+          execution_probability: 0.2
+        
+name: 0212_addxiyuan_registrated_addhead_nodecay_filter5_visualprompt_addtransform

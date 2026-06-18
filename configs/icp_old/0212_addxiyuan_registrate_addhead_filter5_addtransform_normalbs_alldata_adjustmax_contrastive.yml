@@ -1,0 +1,17 @@
+_BASE_: './0212_addxiyuan_registrate_addhead_filter5_addtransform_normalbs_contrastive.yml'
+loaders:
+  batch_size: 32
+  train:
+    max_value: 35
+    img_file_path: '../../data/train_0212_registrated_5.0.lst'
+    text_file_path: '../../data/train_0212_description_5.0.lst'
+  test:
+    max_value: 35
+    img_file_path: '../../data/test_0212_registrated_5.0.lst'
+    text_file_path: '../../data/test_0212_description_5.0.lst'
+optimizer:
+  weight_decay: 0.2
+scheduler:
+  accumulate_gradient_count: 1
+
+name: 0212_addxiyuan_registrate_addhead_filter5_addtransform_normalbs_alldata_adjustmax_contrastive

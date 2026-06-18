@@ -1,0 +1,5 @@
+_BASE_: './0212_addxiyuan_registrate_addhead_filter5.yml'
+model:
+  prompt_length: 12
+  vision_ctx: 10
+name: 0212_addxiyuan_registrated_addhead_nodecay_filter5_visualprompt

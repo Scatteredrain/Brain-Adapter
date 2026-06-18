@@ -1,0 +1,16 @@
+_BASE_: './0212_addxiyuan_registrate_addhead_filter5_addtransform_normalbs.yml'
+loaders:
+  batch_size: 32
+  train:
+    max_value: 35
+    img_file_path: '../../data/data_all/train_registrated.lst'
+    text_file_path: '../../data/data_all/train_description.lst'
+  test:
+    max_value: 35
+    img_file_path: '../../data/data_all/test_registrated.lst'
+    text_file_path: '../../data/data_all/test_description.lst'
+optimizer:
+  weight_decay: 0.2
+scheduler:
+  accumulate_gradient_count: 1
+name: 0212_addxiyuan_registrated_addhead_nodecay_filter5_normalbs_alldata_adjustmax

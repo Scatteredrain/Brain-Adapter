@@ -1,0 +1,9 @@
+_BASE_: './0212_addxiyuan_registrate.yml'
+model:
+  embed_dim: 1024
+  num_mha_heads: 4
+scheduler:
+  accumulate_gradient_count: 16
+optimizer:
+  lr: 0.0002
+name: 0212_addxiyuan_registrated_addhead

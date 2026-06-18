@@ -1,0 +1,22 @@
+_BASE_: './0212_addxiyuan_registrate_addhead_filter5_addtransform_normalbs.yml'
+loaders:
+  batch_size: 32
+  train:
+    img_file_path: '../../data/data_all/train_registrated.lst'
+    text_file_path: '../../data/data_all/train_description.lst'
+    max_value: 35
+    transformer:
+      raw:
+        RandomRotate:
+          enabled: True
+          axes: [[2,1]]
+          angle_spectrum: 45
+  test:
+    img_file_path: '../../data/test_registrated.lst'
+    text_file_path: '../../data/test_description.lst'
+    max_value: 35
+optimizer:
+  weight_decay: 0.2
+scheduler:
+  accumulate_gradient_count: 1
+name: 0727_addxiyuan_registrated_addhead_nodecay_filter5_normalbs_adjustmax

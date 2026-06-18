@@ -1,0 +1,11 @@
+_BASE_: '../0212_addxiyuan_registrate_addhead_filter5_addtransform_normalbs_alldata_adjustmax.yml'
+
+loaders:
+  train:
+    img_file_path: '../../data/cross_val/train_0212_registrated_2.lst'
+    text_file_path: '../../data/cross_val/train_0212_description_2.lst'
+  test:
+    img_file_path: '../../data/cross_val/test_0212_registrated_2.lst'
+    text_file_path: '../../data/cross_val/test_0212_description_2.lst'
+
+name: 0212_addxiyuan_registrated_addhead_nodecay_filter5_normalbs_alldata_adjustmax/fold2

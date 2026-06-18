@@ -1,0 +1,4 @@
+_BASE_: '../0212_addxiyuan_registrate_addhead_filter5_addtransform_normalbs_alldata_adjustmax.yml'
+loss:
+  lambda_regress: 5.0
+name: 0212_addxiyuan_registrated_addhead_nodecay_filter5_normalbs_alldata_adjustmax_reweight/5

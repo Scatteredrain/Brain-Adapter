@@ -1,0 +1,18 @@
+_BASE_: '../icp/0918_alldata_abmil_radclip_baseline.yml'
+VERSION: 1
+
+name: release_abmil_radclip
+checkpoints_dir: ./checkpoints_release
+
+loaders:
+  train:
+    img_file_path: REPLACE_WITH_TRAIN_IMAGE_LIST
+    text_file_path: REPLACE_WITH_TRAIN_TEXT_LIST
+    label_file_path: REPLACE_WITH_TRAIN_LABEL_LIST
+  test:
+    img_file_path: REPLACE_WITH_TEST_IMAGE_LIST
+    text_file_path: REPLACE_WITH_TEST_TEXT_LIST
+    label_file_path: REPLACE_WITH_TEST_LABEL_LIST
+
+model:
+  backbone_ckpt: REPLACE_WITH_RADCLIP_CHECKPOINT

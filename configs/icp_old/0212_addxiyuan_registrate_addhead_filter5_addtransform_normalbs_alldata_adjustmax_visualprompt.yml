@@ -1,0 +1,9 @@
+_BASE_: './0212_addxiyuan_registrate_addhead_filter5_addtransform_normalbs_alldata_adjustmax.yml'
+loaders:
+  batch_size: 12
+model:
+  prompt_length: 12
+  vision_ctx: 3
+optimizer:
+  weight_decay: 0.2
+name: 0212_addxiyuan_registrated_addhead_nodecay_filter5_normalbs_alldata_adjustmax_visualprompt
