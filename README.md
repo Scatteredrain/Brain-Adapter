@@ -6,7 +6,7 @@ This is a PyTorch implementation of **Brain-Adapter: A Dual-Stream Vision-Langua
 
 Brain-Adapter is a dual-stream vision-language MIL framework for multi-label diagnosis on head CT volumes. It couples a global vision-language alignment stream with a logic-aware MIL stream to model both study-level semantics and fine-grained pathological cues, and further uses UAR-based refinement during inference. This repository contains the paper-core training path, UAR-based evaluation refinement, and logic-set entity extraction.
 
-![Brain-Adapter method](./figs/method_v4.png)
+![Brain-Adapter method](./figs/brainadapter.png)
 
 In our profiling setup on an NVIDIA GeForce RTX 4090, Brain-Adapter achieves 79.4 ms/sample latency with 1003.6 MB peak GPU memory.
 
